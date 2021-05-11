@@ -27,11 +27,17 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	//캐릭터 움직임 변수
+	//캐릭터 움직임 변수 삭제예정
 	void Forward(float value);
 	void Back(float value);
 	void Left(float value);
 	void Right(float value);
+	
+	//캐릭터 움직임 함수 
+	UFUNCTION()
+	void MoveForward(float value);
+	UFUNCTION()
+	void MoveRight(float value);
 
 	//인카운터 관련 변수
 	UPROPERTY(EditAnywhere,BlueprintReadWrite) float encount;

@@ -44,24 +44,34 @@ void ATestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 	check(PlayerInputComponent);
-	PlayerInputComponent->BindAxis("Forward", this, &ATestCharacter::Forward);
-	PlayerInputComponent->BindAxis("Back", this, &ATestCharacter::Back);
-	PlayerInputComponent->BindAxis("Left", this, &ATestCharacter::Left);
-	PlayerInputComponent->BindAxis("Right", this, &ATestCharacter::Right);
-	PlayerInputComponent->BindAction("Jump",IE_Pressed ,this, &ATestCharacter::Jump);
+	
+	
+	PlayerInputComponent->BindAxis("MoveForward", this, &ATestCharacter::MoveForward);
+	//PlayerInputComponent->BindAxis("Back", this, &ATestCharacter::Back);
+	//PlayerInputComponent->BindAxis("Left", this, &ATestCharacter::Left);
+	PlayerInputComponent->BindAxis("MoveRight", this, &ATestCharacter::MoveRight);
+	// 점프기능 삭제 PlayerInputComponent->BindAction("Jump",IE_Pressed ,this, &ATestCharacter::Jump);
+	
 
 }
 
-void ATestCharacter::Forward(float value) {
-	lastInput.Y += value;
+void ATestCharacter::MoveForward(float value) {
+	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
+	AddMovementInput(Direction, value);
 }
-void ATestCharacter::Back(float value) {
+void ATestCharacter::MoveRight(float value) {
+	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
+	AddMovementInput(Direction, value);
+}
+
+
+/*void ATestCharacter::Back(float value) {
 	lastInput.Y -= value;
-}
-void ATestCharacter::Left(float value) {
+}*/
+/*void ATestCharacter::Left(float value) {
 	lastInput.X -= value;
 }
 void ATestCharacter::Right(float value) {
 	lastInput.X += value;
-}
+}*/
 
