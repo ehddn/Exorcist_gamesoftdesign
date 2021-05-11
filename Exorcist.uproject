@@ -1,16 +1,3 @@
-{
-	"FileVersion": 3,
-	"EngineAssociation": "4.26",
-	"Category": "",
-	"Description": "",
-	"Modules": [
-		{
-			"Name": "test12",
-			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine"
-			]
-		}
-	]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8fe5097a3d4e5759b0bb76828fec3fcad98994c6fc59adc2ad721163299d665
+size 251
