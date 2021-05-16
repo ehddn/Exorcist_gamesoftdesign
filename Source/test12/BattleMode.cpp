@@ -2,3 +2,4 @@
 
 #include "BattleMode.h"
 
+// 전투기능을 담당할 게임모드

@@ -3,7 +3,8 @@
 
 #include "Enemy.h"
 
-// Sets default values
+//적 몬스터 클래스
+
 AEnemy::AEnemy()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.

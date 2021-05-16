@@ -9,6 +9,8 @@
 /**
  * 
  */
+
+ // 전투기능을 담당할 게임모드
 UCLASS()
 class TEST12_API ABattleMode : public AGameMode
 {

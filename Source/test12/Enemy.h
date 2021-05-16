@@ -6,6 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "Enemy.generated.h"
 
+//적 몬스터 클래스
 UCLASS()
 class TEST12_API AEnemy : public APawn
 {

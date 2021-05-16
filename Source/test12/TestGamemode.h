@@ -9,6 +9,9 @@
 /**
  * 
  */
+
+//전체적인 게임모드를 담당
+
 UCLASS()
 class TEST12_API ATestGamemode : public AGameModeBase
 {
