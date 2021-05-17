@@ -45,6 +45,10 @@ public:
 	//인카운터 관련 변수
 	UPROPERTY(EditAnywhere,BlueprintReadWrite) float encount;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) bool IsEncount;
+
+	//HP 
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite) int Energy;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite) float Energy_percent;
 	
 
 };
