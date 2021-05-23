@@ -41,6 +41,8 @@ public:
 	void MoveForward(float value);
 	UFUNCTION()
 	void MoveRight(float value);
+	UFUNCTION()
+		void  Turn(float Axis);
 
 	//인카운터 관련 변수
 	UPROPERTY(EditAnywhere,BlueprintReadWrite) float encount;

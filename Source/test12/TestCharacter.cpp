@@ -51,7 +51,7 @@ void ATestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	//PlayerInputComponent->BindAxis("Left", this, &ATestCharacter::Left);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ATestCharacter::MoveRight);
 	// 점프기능 삭제 PlayerInputComponent->BindAction("Jump",IE_Pressed ,this, &ATestCharacter::Jump);
-	
+	PlayerInputComponent->BindAxis("Turn", this, &ATestCharacter::Turn);
 
 }
 
@@ -62,6 +62,10 @@ void ATestCharacter::MoveForward(float value) {
 void ATestCharacter::MoveRight(float value) {
 	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
 	AddMovementInput(Direction, value);
+}
+
+void ATestCharacter::Turn(float Axis) {
+	AddControllerYawInput(Axis);
 }
 
 
