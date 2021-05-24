@@ -51,7 +51,7 @@ void ATestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	//PlayerInputComponent->BindAxis("Left", this, &ATestCharacter::Left);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ATestCharacter::MoveRight);
 	// 점프기능 삭제 PlayerInputComponent->BindAction("Jump",IE_Pressed ,this, &ATestCharacter::Jump);
-	PlayerInputComponent->BindAxis("Turn", this, &ATestCharacter::Turn);
+	//PlayerInputComponent->BindAxis("Turn", this, &ATestCharacter::Turn); 회전 기능 굳이 필요한가?...
 
 }
 
