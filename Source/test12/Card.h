@@ -22,5 +22,18 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Property)
+		int type;
+	// 카드 속성, 0은 무속성, 1은 물, 2는 불, 3은 땅
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Property)
+		int Card_cost;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Property)
+		int CardKinds;
+	//카드 종류, 0은 주문류, 1은 공격류
+
+	//데미지는 후에 추가할예정, 지금은 블루프린트 내에 변수 있음!
+
+	
 
 };
