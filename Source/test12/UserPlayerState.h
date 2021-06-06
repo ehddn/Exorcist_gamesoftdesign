@@ -17,8 +17,8 @@ class TEST12_API AUserPlayerState : public APlayerState
 
 
 public:
-	UPROPERTY(BlueprintReadWrite,Category="PlayerProp")
-		 int PlayerInitHP;
-	UPROPERTY(BlueprintReadWrite, Category = "PlayerProp")
-		 int PlayerHP;
+	//UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="PlayerProp")
+		// int PlayerInitHP;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PlayerProp")
+		// int PlayerHP;
 };
