@@ -25,9 +25,10 @@ void ATestCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	float len = lastInput.Size();
+	//float len = lastInput.Size();
 
 	//이동입력이1보다 크면 가속이아닌 정규화 시킬것
+	/*
 	if (len > 1.0f) {
 		lastInput /= len;
 	}
@@ -36,6 +37,7 @@ void ATestCharacter::Tick(float DeltaTime)
 
 	//초당 마지막으로 한 입력을 0으로 초기화
 	lastInput = FVector2D(0.0f, 0.0f);
+	*/
 
 }
 
@@ -46,12 +48,14 @@ void ATestCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	check(PlayerInputComponent);
 	
 	
-	PlayerInputComponent->BindAxis("MoveForward", this, &ATestCharacter::MoveForward);
+	//PlayerInputComponent->BindAxis("MoveForward", this, &ATestCharacter::MoveForward);
 	//PlayerInputComponent->BindAxis("Back", this, &ATestCharacter::Back);
 	//PlayerInputComponent->BindAxis("Left", this, &ATestCharacter::Left);
-	PlayerInputComponent->BindAxis("MoveRight", this, &ATestCharacter::MoveRight);
+	//PlayerInputComponent->BindAxis("MoveRight", this, &ATestCharacter::MoveRight);
 	// 점프기능 삭제 PlayerInputComponent->BindAction("Jump",IE_Pressed ,this, &ATestCharacter::Jump);
-	//PlayerInputComponent->BindAxis("Turn", this, &ATestCharacter::Turn); 회전 기능 굳이 필요한가?...
+
+	//PlayerInputComponent->BindAxis("Turn", this, &ATestCharacter::Turn);
+	//PlayerInputComponent->BindAxis("LookUp", this, &ATestCharacter::AddControllerPitchInput);
 
 }
 
