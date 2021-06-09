@@ -34,7 +34,7 @@ public:
 
 	//데미지는 후에 추가할예정, 지금은 블루프린트 내에 변수 있음!
 
-	virtual void Attack(int type) override;
+	//virtual void Attack(int type) override;
 	
 
 };
